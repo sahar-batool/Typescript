@@ -38,3 +38,26 @@ try {
     console.log("Error", error)
     
 }
+//here using any 
+let data1: any = "chai aur typescript" 
+const strData1: string = data1
+
+
+//here unknown we forecfully tell as string ,as number
+let data: unknown = "chai aur typescript" 
+const strData: string = data as string
+
+
+type Role = "user" | "admin" | "superadmin"
+
+function redirectBasedOnRole(role:Role): void {
+    if(role === "admin"){
+        console.log("redirect to admin dashboard");
+        return
+    }
+    if(role === "user"){
+        console.log("redirect to user dashboard");
+        return
+    }
+    role
+}
