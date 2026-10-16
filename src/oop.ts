@@ -69,3 +69,20 @@ class Walet{
 }
 
 const w = new Walet()
+
+//control gate
+class modernChai {
+    private _sugar = 2
+
+    get(){
+        return this._sugar
+    }
+
+    set(value: number){
+        if(value > 5) throw new Error("too much sugar")
+            this._sugar = value
+
+    }
+}
+const c = new modernChai()
+// c.sugar = 3
